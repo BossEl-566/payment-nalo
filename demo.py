@@ -10,9 +10,8 @@ from payments.strategies import (
 
 
 def main():
-    print("=" * 50)
     print("PAYMENT NALO - STRATEGY DESIGN PATTERN")
-    print("=" * 50)
+
 
     # Step 1: Create checkout with Mobile Money
     checkout = Checkout(MobileMoneyPayment())
@@ -42,10 +41,6 @@ def main():
         checkout.process_payment(Decimal("-50.00"))
     except ValueError as error:
         print(f"Payment failed: {error}")
-
-    print("\n" + "=" * 50)
-    print("DEMONSTRATION COMPLETED")
-    print("=" * 50)
 
 
 if __name__ == "__main__":
